@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - OverIce:
-        m_Texture: {fileID: 2800000, guid: 21308f6bbe2dcbf479354276b9289185, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4af324b5ee0df7b4dbfc606cb60ecdb0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - RampTexture:
@@ -31,7 +31,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - SurfaceTexture:
-        m_Texture: {fileID: 2800000, guid: 57179123689290e45b3578e9e7b815c1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 304cf98b16f30a8478757c76070d8636, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - UnderIce:

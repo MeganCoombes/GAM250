@@ -16,7 +16,7 @@
 
 		sampler2D IceLight;
 
-		// something
+		// adds the lighting effect based on the dot product
 #pragma lighting IceSurface
 	inline half4 LightingIceSurface(SurfaceOutput s, half3 lightDir, half atten)
 	{

@@ -2,12 +2,12 @@
 
 	Properties
 	{
-		SilhouetteEffect("Silhouette Effect", 2D) = "white" {}
+		Highlights("Colour Highlights", 2D) = "white" {} // leave as none to keep white colour
 		OverIce("Over Ice Effect", 2D) = "white" {}
 		SurfaceTexture("Surface Effect", 2D) = "white" {}
 		Colour("Colour", Color) = (1, 1, 1, 1)
-		EdgeThickness("Silouette Dropoff Rate", float) = 1.0
-		DistortStrength("Distortion Strength", float) = 1.0
+	//	EdgeThickness("Silouette Dropoff Rate", float) = 1.0
+	//	DistortStrength("Distortion Strength", float) = 1.0
 	}
 
 		SubShader
@@ -94,7 +94,7 @@
 				#pragma fragment fragment
 
 				// Properties
-				sampler2D       SilhouetteEffect;
+				sampler2D       Highlights;
 				sampler2D       SurfaceTexture;
 				sampler2D       OverIce;
 				uniform float4	Colour;
@@ -136,7 +136,7 @@
 				{
 					float edgeFactor = abs(dot(input.viewDir, input.normal)); // computes silhouette factor
 					float oneMinusEdge = 1.0 - edgeFactor; // computes silhouette factor
-					float3 rgb = tex2D(SilhouetteEffect, float2(oneMinusEdge, 0.5)).rgb; // gets silhouette colour
+					float3 rgb = tex2D(Highlights, float2(oneMinusEdge, 0.5)).rgb; // gets silhouette colour
 					float opacity = min(1.0, Colour.a / edgeFactor); // grabs silhouette opacity
 					opacity = pow(opacity, EdgeThickness); // grabs silhouette opacity
 

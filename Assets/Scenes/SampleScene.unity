@@ -6321,10 +6321,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446012e35cb84cb41a1dc7022bf07b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnowTexture: {fileID: 2800000, guid: 74f49f47c760f754a823a013d84b1524, type: 3}
-  SnowColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
+--- !u!114 &751358880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751358874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8c5db3c8e2bc141a5b28d98a422d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnowTexture: {fileID: 2800000, guid: 0460bf73923861d49a6ee6d2a5fd7623, type: 3}
+  SnowColor: {r: 1, g: 1, b: 1, a: 1}
   SnowTextureScale: 0.1
-  BottomThreshold: 0.39
+  BottomThreshold: 0.36
   TopThreshold: 1
 --- !u!1 &756793929
 GameObject:
@@ -6348,7 +6359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756793929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 202.232, y: 8.35, z: 58.22}
+  m_LocalPosition: {x: 202.232, y: 8.83, z: 56.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 709893887}
@@ -7968,7 +7979,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 199.192
+      value: 198.26
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7976,7 +7987,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 55.94
+      value: 55.22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
