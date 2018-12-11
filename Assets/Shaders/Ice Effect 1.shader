@@ -1,4 +1,4 @@
-﻿Shader "Ice Effects/Ice Effect" {
+﻿Shader "Ice and Snow Effects/Ice Effect" {
 
 	Properties{
 		TopColor("Top Color", Color) = (0,0,0,0) // top gradient colour, change in inspector

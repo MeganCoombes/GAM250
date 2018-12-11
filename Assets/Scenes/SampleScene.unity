@@ -6318,13 +6318,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 751358874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05036b16e6004856aacf1ffc496c2c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 446012e35cb84cb41a1dc7022bf07b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SnowTexture: {fileID: 2800000, guid: 74f49f47c760f754a823a013d84b1524, type: 3}
-  SnowColor: {r: 1, g: 1, b: 1, a: 1}
-  SnowTextureScale: 3
-  BottomThreshold: 0.527
+  SnowColor: {r: 1, g: 0.995283, b: 0.995283, a: 1}
+  SnowTextureScale: 0.1
+  BottomThreshold: 0.39
   TopThreshold: 1
 --- !u!1 &756793929
 GameObject:

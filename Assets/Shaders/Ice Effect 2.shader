@@ -1,4 +1,4 @@
-﻿Shader "Ice Effects/Ice Effect 2" {
+﻿Shader "Ice and Snow Effects/Ice Effect 2" {
 
 	Properties
 	{
