@@ -26,12 +26,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 57179123689290e45b3578e9e7b815c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - SilhouetteEffect:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - SurfaceTexture:
         m_Texture: {fileID: 2800000, guid: 57179123689290e45b3578e9e7b815c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - UnderIce:
-        m_Texture: {fileID: 2800000, guid: d9670d6679ee9ad4a862148f900ee7bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3060fc7c4add2ca4d9fced8401bcef8e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
