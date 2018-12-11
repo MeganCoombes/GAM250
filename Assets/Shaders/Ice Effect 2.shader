@@ -31,6 +31,7 @@
 				#pragma fragment fragment
 				#include "UnityCG.cginc"
 
+
 			// Properties
 			sampler2D Background;
 			sampler2D SurfaceTexture;
