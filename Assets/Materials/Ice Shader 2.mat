@@ -24,7 +24,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - OverIce:
         m_Texture: {fileID: 2800000, guid: 4af324b5ee0df7b4dbfc606cb60ecdb0, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - RampTexture:
         m_Texture: {fileID: 2800000, guid: 57179123689290e45b3578e9e7b815c1, type: 3}

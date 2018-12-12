@@ -152,6 +152,7 @@
 					float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
 					float ramp = clamp(dot(bump, lightDirection), 0.001, 1.0);
 					float4 lighting = float4(tex2D(OverIce, float2(ramp, 0.3)).rgb, 1); // changing the first value (after ramp,) changes the look of the ice surface
+					
 
 					return float4(rgb, opacity) * lighting;
 				}
