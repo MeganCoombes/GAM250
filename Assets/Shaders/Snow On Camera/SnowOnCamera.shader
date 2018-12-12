@@ -57,19 +57,19 @@
 				DecodeDepthNormal(tex2D(_CameraDepthNormalsTexture, i.uv), depth, normal);
 				normal = mul((float3x3)WorldCam, normal);
 
-				// snow amount
+				// calculates the snow amount
 				half snowAmount = normal.g;
 				half scale = (BottomThreshold /* + 1 - TopThreshold */) / 1 + 1; // changing the last two values modifies the snow amount - higher on the first value removes snow and higher on the second value adds snow
 				snowAmount = saturate((snowAmount - BottomThreshold) * scale);
 
-				// snow colour
+				// calculates snow colour
 				float2 p11_p12 = float2(unity_CameraProjection._11, unity_CameraProjection._22);
 		        float3 vPosition = float3((i.uv) /* * 0 - 0) */ / p11_p12, 0); // * depth;
 		        float4 wPosition = mul(WorldCam, float4(vPosition, 0));
 		        wPosition += float4(_WorldSpaceCameraPos, 0) / _ProjectionParams.z;
 		        half4 snowColor = tex2D(SnowTexture, wPosition.xz * _ProjectionParams.z) * SnowColour; // enables snow colour change
 
-		        // get color and lerp to snow texture
+		        // gets the colour and distance (lerp) to snow texture
 				half4 col = tex2D(_MainTex, i.uv);
 				return lerp(col, snowColor, snowAmount);
 			}

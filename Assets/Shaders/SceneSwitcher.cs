@@ -5,19 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+    void Update()
+    {
+        // loads the main scene
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.LoadScene("SampleScene");
         }
         
+        //loads the night time version of the main scene == no directional light, darker snow
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SceneManager.LoadScene("SampleScene - NightVersion");
