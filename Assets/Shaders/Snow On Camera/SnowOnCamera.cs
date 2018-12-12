@@ -4,40 +4,33 @@ using System.Collections;
 [ExecuteInEditMode]
 public class SnowOnCamera : MonoBehaviour
 {
-
 	public Texture2D SnowTexture;
-
-	public Color SnowColor = Color.white;
-
-	public float SnowTextureScale = 0.1f;
-
-	[Range(0, 1)]
-	public float BottomThreshold = 0f;
-	[Range(0, 1)]
-	public float TopThreshold = 1f;
-
-	private Material _material;
+    public Color SnowColour;
+    private Material mat;
+    //	public float SnowTextureScale = 0.1f;
+    /* [Range(0, 1)] public */ float BottomThreshold = 0.45f;
+	/* [Range(0, 1)] public */ float TopThreshold = 1f;
 
 	void OnEnable()
 	{
-		// dynamically create a material that will use our shader
-		_material = new Material(Shader.Find("Ice and Snow Effects/Snow On Camera"));
+		// creates a new material that will use the Snow Shader
+		mat = new Material(Shader.Find("Ice and Snow Effects/Snow On Camera"));
 
-		// tell the camera to render depth and normals
+		// tells the camera to render depth and normals
 		GetComponent<Camera>().depthTextureMode |= DepthTextureMode.DepthNormals;
 	}
 
 	void OnRenderImage(RenderTexture src, RenderTexture dest) 
 	{
-		// set shader properties
-		_material.SetMatrix("_CamToWorld", GetComponent<Camera>().cameraToWorldMatrix);
-		_material.SetColor("_SnowColor", SnowColor);
-		_material.SetFloat("_BottomThreshold", BottomThreshold);
-		_material.SetFloat("_TopThreshold", TopThreshold);
-		_material.SetTexture("_SnowTex", SnowTexture);
-		_material.SetFloat("_SnowTexScale", SnowTextureScale);
+		// sets the Snow Shader's properties
+		mat.SetMatrix("WorldCam", GetComponent<Camera>().cameraToWorldMatrix);
+		mat.SetColor("SnowColour", SnowColour);
+		mat.SetFloat("BottomThreshold", BottomThreshold);
+		mat.SetFloat("TopThreshold", TopThreshold);
+		mat.SetTexture("SnowTexture", SnowTexture);
+	//	_material.SetFloat("_SnowTexScale", SnowTextureScale); ** not needed
 
-		// execute the shader on input texture (src) and write to output (dest)
-		Graphics.Blit(src, dest, _material);
+		// execute the shader
+		Graphics.Blit(src, dest, mat);
 	}
 }
